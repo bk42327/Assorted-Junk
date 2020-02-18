@@ -5,7 +5,26 @@
 import subprocess
 import os
 import time
+import sys
+import platform
 
+#
+# ID
+#
+__author__ = "Bernd Kunze"
+__author_email__ = "bkunze@gmx.net"
+__copyright__ = "Copyright (c) 2020"
+__license__ = "BSD"
+__version__ = "1.02"
+
+#
+OS = platform.system ()
+print (sys.argv [0], __version__)
+print (OS)
+if (OS != "Darwin"):
+    printf ("Only MacOS supported.")
+    exit (0)
+#
 Done = 0;
 while  Done == 0:
     time.sleep (60);
